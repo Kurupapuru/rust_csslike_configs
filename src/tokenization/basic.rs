@@ -65,7 +65,7 @@ impl Iterator for BasicTokensIterator {
 
             // check if char is special symbol
             let simple_token : Option<BasicToken> = match char {
-                '.' | '-' | '_' | '{' | '}' | ':' | ';' => Some(BasicToken::SpecialSymbol(char)),
+                '.' | '-' | '_' | '{' | '}' | ':' | ';' | '>' => Some(BasicToken::SpecialSymbol(char)),
                 _ => None
             };
             if let Some(simple_token) = simple_token {
